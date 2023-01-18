@@ -1,13 +1,19 @@
 import axios from 'axios';
 import getURL from '../lib/getURL.js';
 
-const getProductsId = (adverts) => adverts.map(({ id }) => id);
+const getProductsId = (adverts) => {
+  if (!adverts) return [];
+  return adverts.map(({ id }) => id);
+};
 
-const getPositions = (pages) => pages.reduce((acc, page) => {
-  const { positions, page: pageNumber } = page;
-  const positionOnPage = positions.map((place) => ({ place, pageNumber }));
-  return [...acc, ...positionOnPage];
-}, []);
+const getPositions = (pages) => {
+  if (!pages) return [];
+  return pages.reduce((acc, page) => {
+    const { positions, page: pageNumber } = page;
+    const positionOnPage = positions.map((place) => ({ place, pageNumber }));
+    return [...acc, ...positionOnPage];
+  }, []);
+};
 
 const createProductsMap = (products) => {
   const productsMap = new Map();

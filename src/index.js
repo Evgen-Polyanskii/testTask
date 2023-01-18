@@ -12,7 +12,7 @@ export default () => {
   // eslint-disable-next-line no-unused-vars
   app.use((err, req, res, next) => {
     const message = err.message || 'Something went wrong, please try again';
-    const status = err.response?.status || 500;
+    const status = err.status || err.response?.status || 500;
     res.status(status).json({ message });
   });
 
