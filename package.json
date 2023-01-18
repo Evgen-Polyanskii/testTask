@@ -5,7 +5,8 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "start-dev": "npx nodemon bin/server.js"
+    "start-dev": "npx nodemon bin/server.js",
+    "start": "node bin/server.js"
   },
   "engines": {
     "node": "16.x"
