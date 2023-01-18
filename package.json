@@ -1,0 +1,35 @@
+{
+  "name": "testtask",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start-dev": "npx nodemon bin/server.js"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evgen-Polyanskii/testTask.git"
+  },
+  "author": "Evgen-Polyanskii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evgen-Polyanskii/testTask/issues"
+  },
+  "homepage": "https://github.com/Evgen-Polyanskii/testTask#readme",
+  "dependencies": {
+    "axios": "^1.2.2",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.4",
+    "nodemon": "^2.0.20"
+  }
+}
